@@ -7,18 +7,17 @@ struct Rectangle {  // definition
 	int width;  //2bytes
 	// total 4 bytes
 };
+	
+	struct Rectangle r1; // declaration
 
 int main()
 {
 	
-	struct Rectangle r; // declaration
-	
-
-	r.length = 15; // accesing members with dot operative
-	r.width = 10; 
+	r1.length = 15; // accesing members with dot operative
+	r1.width = 10; 
 
 	
-	cout << "Area of Rectangle is " << r.length * r.width ;
+	cout << "The area of Rectangle 1 is " << r1.length * r1.width ;
 
 	return 0;
 
