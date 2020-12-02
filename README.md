@@ -38,3 +38,19 @@ Members are accessed with dot operators.
 `r.width = 10;`
 
 ## Pointers
+
+A pointer is an address variable that is meant for storing the address of data not the data itself.
+
+A pointer allows a program to access Heap memory and resources outside of the program.
+
+Pointers are also used for parameter passing.
+
+Data variable == `int a = 10;`
+
+Address variable == `int *p;`
+
+Pointer initialization == `p = &a;`
+
+Use an asterisk `*` for declaration and dereferencing. The ampersand `&` is is used when initializing.
+
+Every pointer takes 8 bytes no matter the data type.
