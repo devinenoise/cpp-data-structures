@@ -14,7 +14,8 @@ int main()
 
 	cout << r << endl;  // 11
 	cout << a << endl;  // 11
-
+	cout << &r << endl; // address
+	cout << *(&r) << endl; // 11
 	
 	return 0;
 }
