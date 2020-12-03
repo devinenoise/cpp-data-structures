@@ -12,15 +12,13 @@ int main()
 	cout << r.length << endl;
 	cout << r.width << endl;
 
-	/*
+	
+	//Create object dynamically in Heap
 	
 	Rectangle *p;
-	p = new Rectangle; //create object dynamically in the heap
+	p = new Rectangle; 
 	
-	*/
-		
-	
-	Rectangle *p = &r;  // pointer to the address
+	//Rectangle *p = &r;  // pointer to the reference
 	
 	p->length = 10;
 	p->width = 5;
