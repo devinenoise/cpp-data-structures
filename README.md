@@ -57,4 +57,4 @@ Every pointer takes 8 bytes no matter the data type.
 
 ## Reference
 
-A reference is an alias given to a variable. Use an ampersand `&` to declared a reference. Referencing is useful for parameter passing in small functions.
+A reference is an alias given to a variable. Use an ampersand `&` to declared a reference. Referencing is useful for parameter passing in small functions. A reference must be initialized when declared.
