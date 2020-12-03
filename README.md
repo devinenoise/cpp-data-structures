@@ -65,3 +65,4 @@ A pointer uses `->` to access a structure instead of a dot operator.
 
 ## Functions
 
+A function is a group of related instructions that performs a specific task. They are also known as modules or procedures. Breaking your program into smaller functions used inside of a main function is called Modular or Procedural programming.  One function cannot access the variables of another function.
