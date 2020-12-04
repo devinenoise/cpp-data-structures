@@ -65,4 +65,12 @@ A pointer uses `->` to access a structure instead of a dot operator.
 
 ## Functions
 
-A function is a group of related instructions that performs a specific task. They are also known as modules or procedures. Breaking your program into smaller functions used inside of a main function is called Modular or Procedural programming.  One function cannot access the variables of another function.
+A function is a group of related instructions that performs a specific task. They are also known as modules or procedures. Breaking your program into smaller functions used inside of a main function is called Modular or Procedural programming. One function cannot access the variables of another function.
+
+## Parameter Passing
+
+In call by value, the changes in formal parameters will not affect the actual parameters. Call by value should be used when you want to process something and return the result.
+
+In call by address, the actual parameters address are passed to formal parameters and the formal parameters must be pointers.
+
+In call by reference, the formal function parameters need to ampersand `&` to to change the actual parameters. It is possible, that the function will run inline depending on the compiler.
