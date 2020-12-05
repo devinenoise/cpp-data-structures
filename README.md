@@ -39,7 +39,7 @@ Members are accessed with dot operators.
 
 ## Pointers
 
-A pointer is an address variable that is meant for storing the address of data not the data itself.
+A pointer is an address variable that is meant for storing the address of data not the data itself. You cannot use a for each loop on a pointer.
 
 A pointer allows a program to access Heap memory and resources outside of the program.
 
@@ -74,3 +74,7 @@ In call by value, the changes in formal parameters will not affect the actual pa
 In call by address, the actual parameters address are passed to formal parameters and the formal parameters must be pointers.
 
 In call by reference, the formal function parameters need to ampersand `&` to to change the actual parameters. It is possible, that the function will run inline depending on the compiler.
+
+## Array as parameter
+
+Arrays are passed only by address, never by value. When an array is a formal parameter, it's actually a pointer to an array.  
