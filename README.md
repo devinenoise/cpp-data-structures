@@ -77,4 +77,8 @@ In call by reference, the formal function parameters need to ampersand `&` to to
 
 ## Array as parameter
 
-Arrays are passed only by address, never by value. When an array is a formal parameter, it's actually a pointer to an array.  
+Arrays are passed only by address, never by value. When an array is a formal parameter, it's actually a pointer to an array.
+
+## Structure as parameter
+
+A structure can be called by value, address, and reference. When using value, the formal parameters will not affect the actual parameters. In call by reference, the formal parameters will change actual parameters. If the structure contains an array, you can still pass by value.
