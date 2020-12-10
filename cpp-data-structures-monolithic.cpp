@@ -17,7 +17,7 @@ int main()
 	int area = length * width;
 	int peri = 2 * (length + width);
 
-	cout << "The area is " << area << endl << "The permiter is " << peri << endl;
+	cout << "The area is " << area << endl << "The perimeter is " << peri << endl;
 	return 0;
 
 };
