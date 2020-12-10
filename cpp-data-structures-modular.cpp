@@ -5,29 +5,42 @@ using namespace std;
 
 // find the area and perimeter of a rectangle using input from the user
 
-int area(int length, int width) {
-	return length * width;
+struct Rectangle {
+	int length;
+	int width;
+};
+
+void initialize(struct Rectangle* r, int l, int w) {
+	r->length = l;
+	r->width = w;
 }
 
-int perimeter(int length, int width) {
+int area(struct Rectangle r) {
+	return r.length * r.width;
+}
+
+int perimeter(struct Rectangle r) {
 	int p;
-	p = 2 * (length + width);
+	p = 2 * (r.length + r.width);
 	return p;
 }
 
 
 int main()
 {
+	Rectangle r = { 0, 0 };
 
-	int length = 0, width = 0;
+	int l, w;
 
 	cout << "Enter Length and Width " << endl;
-	cin >> length >> width;
+	cin >> l >> w;
 
-	int a = area(length, width);
-	int p = perimeter(length, width);
+	initialize(&r, l, w);
 
-	cout << "The area is " << area << endl << "The perimeter is " << p << endl;
+	int a = area(r);
+	int p = perimeter(r);
+
+	cout << "The area is " << a << endl << "The perimeter is " << p << endl;
 
 
 	return 0;
