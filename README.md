@@ -82,3 +82,7 @@ Arrays are passed only by address, never by value. When an array is a formal par
 ## Structure as parameter
 
 A structure can be called by value, address, and reference. When using value, the formal parameters will not affect the actual parameters. In call by reference, the formal parameters will change actual parameters. If the structure contains an array, you can still pass by value.
+
+## Monolithic and Modular Programming
+
+Monolithic programming is tightly coupled code that makes assumptions about the other parts of the code. Monolithic programs work as a single container that has every component that the application needs: one database, one application, one server to deploy to, and one container to share every component. Modular programming is loosely coupled code that allows a program to be more readable, maintainable, scalable, and portable. It also makes it easier for a team of individuals to work together. Modular coding can be problematic in that it creates more work upfront to link modules together, testing takes longer, and the architecture needs to be thought out ahead of time to integrate the different modules.
