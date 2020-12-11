@@ -86,3 +86,7 @@ A structure can be called by value, address, and reference. When using value, th
 ## Monolithic and Modular Programming
 
 Monolithic programming is tightly coupled code that makes assumptions about the other parts of the code. Monolithic programs work as a single container that has every component that the application needs: one database, one application, one server to deploy to, and one container to share every component. Modular programming is loosely coupled code that allows a program to be more readable, maintainable, scalable, and portable. It also makes it easier for a team of individuals to work together. Modular coding can be problematic in that it creates more work upfront to link modules together, testing takes longer, and the architecture needs to be thought out ahead of time to integrate the different modules.
+
+## Classes
+
+A class provides the blueprints for objects, so basically an object is created from a class. You declare objects of a class with exactly the same sort of declaration that you declare variables of basic types. A class definition starts with the keyword class followed by the class name; and the class body, enclosed by a pair of curly braces. A class definition must be followed either by a semicolon or a list of declarations. Class members can be made available as public or private. Template classes allow you to use interchangeable data types such as `int` and `float` without having the rewrite the code for each data type.
