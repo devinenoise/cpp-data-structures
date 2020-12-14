@@ -20,14 +20,28 @@ void fun2(int n) {
 	}
 }
 
+int fun3(int n) {							// using static variable
+	static int x = 0;						
+	if (n > 0) {
+		x++;
+		return fun3(n - 1) + x;				// x is added to n on the return
+	}
+	return 0;
+}
+
+
 int main()
 {
 	int x = 3, y = 3;
-	
-
 	fun(x);
-
 	fun2(y);
+	
+	
+	
+	int r;
+	r = fun3(5);							// x becomes 5
+	cout << r << endl;						// output 25 (r^2)
+
 
 	return 0;
 
