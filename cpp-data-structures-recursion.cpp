@@ -29,6 +29,38 @@ int fun3(int n) {							// using a static variable
 	return 0;
 }
 
+void fun4(int n) {							// tree recursion
+	if (n > 0) {
+		cout << n << endl;
+		fun4(n - 1);
+		fun4(n - 1);
+
+	}
+}
+
+void funB(int n);							// funB must be defined before using in funA
+void funA(int n) {							// indirect recursion
+	if (n > 0) {
+		cout << n << endl;
+		funB(n - 1);
+		
+	}
+}
+
+void funB(int n) {							// indirect recursion
+	if (n > 1) {
+		cout << n << endl;
+		funA(n/2);
+
+	}
+}
+
+int fun5(int n) {							// nested recursion
+	if (n > 100) 
+		return n - 10;
+		return fun5(fun5(n + 11));			// recursive function used as a parameter
+		
+}
 
 int main()
 {
@@ -42,7 +74,19 @@ int main()
 	r = fun3(5);							// r is 5 and x increments to the value of r
 	cout << r << endl;						// output 25 (r^2)
 
+	
+	fun4(3);								// output is 3 2 1 1 2 1 1 (15 activation records)
 
+	
+	funA(20);								// output is 20 19 9 8 4 3 1
+	
+	
+	
+	int s;
+	s = fun5(95);
+	cout << s << endl;						// output is 91
+	
+	
 	return 0;
 
 }
