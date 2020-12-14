@@ -130,3 +130,5 @@ A class provides the blueprints for objects, so basically an object is created f
 The amount of time a computer takes to process a program and the size of a data type can be defined in terms of `n`. The order of n `O(n)` is the time it takes to complete. The order of n squared `O(n^2)` is the time of each `n` element processed.
 
 ## Recursion
+
+A function that calls itself is known as recursive. There must be a condition that terminates the recursion inside of that function or it will repeat infinitely. Recursive tracing is done in the form of a tree and it shows all of the steps a function repeats before it terminates. Recursion has two phases: calling and returning. Also known as ascending and descending, the descending phase differentiates recursion from a loop. The total number of activation records in recursion can be defined as `n+1` in the stack. The amount of time and memory used to execute is `0(n)` because each statement takes `n` amount.
