@@ -65,23 +65,26 @@ int fun5(int n) {							// nested recursion
 int main()
 {
 	int x = 3, y = 3;
+	//tail recursion
 	fun(x);
+
+	//head recursion
 	fun2(y);
 	
 	
-	
+	// static variable
 	int r;
 	r = fun3(5);							// r is 5 and x increments to the value of r
 	cout << r << endl;						// output 25 (r^2)
 
-	
+	// tree recursion
 	fun4(3);								// output is 3 2 1 1 2 1 1 (15 activation records)
 
-	
+	// indirect recursion
 	funA(20);								// output is 20 19 9 8 4 3 1
 	
 	
-	
+	// nested recursion
 	int s;
 	s = fun5(95);
 	cout << s << endl;						// output is 91

@@ -7,11 +7,11 @@ using namespace std;
 template <class T>
 class Arithmetic {
 private:
-	T a;			
+	T a;			                  // T takes the place of int in this case
 	T b;
 public:
 	Arithmetic(T a, T b);
-	T add();
+	T add();							
 	T sub();
 
 };
