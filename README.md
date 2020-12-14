@@ -132,3 +132,23 @@ The amount of time a computer takes to process a program and the size of a data 
 ## Recursion
 
 A function that calls itself is known as recursive. There must be a condition that terminates the recursion inside of that function or it will repeat infinitely. Recursive tracing is done in the form of a tree and it shows all of the steps a function repeats before it terminates. Recursion has two phases: calling and returning. Also known as ascending and descending, the descending phase differentiates recursion from a loop. The total number of activation records in recursion can be defined as `n+1` in the stack. The amount of time and memory used to execute is `0(n)` because each statement takes `n` amount.
+
+A static/global variable used inside of a recursive function only creates one copy. It is called on the return phase.
+
+### Types of Recursion
+
+1. Tail Recursion
+2. Head Recursion
+3. Tree Recursion
+4. Indirect Recursion
+5. Nested Recursion
+
+If the last call in a recursive function is the recursive, then it is a **tail recursion**. The processing in a tail recursion happens at the call phase and it is linear.
+
+Conversely, if the first call in a recursive function is recursive, it is known as an **head recursion**. The processing in an head recursion is done in the return phase and it is linear.
+
+**Tree recursion** is defined as a recursive function that calls itself more than once.
+
+In **Indirect recursion**, there may be more than one functions and they are calling one another in a circular manner. (Example. funcA calls funcB which calls funcA)
+
+In **Nested recursion**, a recursive function will pass the parameter as a recursive call. That means “recursion inside recursion”.
