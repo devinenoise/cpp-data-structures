@@ -23,7 +23,7 @@ int Ipower(int base, int exp) {					// using iteration for loop to find the powe
 	int i;
 	int num=1;									// i = iteration count, exp = exponent
 	for (i = 1; i <= exp; i++)
-		num = num * i;
+		num = num * base;
 	return num;
 }
 
