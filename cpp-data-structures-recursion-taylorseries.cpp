@@ -26,10 +26,16 @@ double eLoop1(double x, double n) {					// using recursion to perform Taylor Ser
 }
 
 
-double eLoop(double x, double n) {					// using a for loop to perform Taylor Series Horner's Rule
+double eLoop(double x, double n) {					// using a for loop to perform Taylor Series 
 	double s = 1;
-	for (; n > 0; n--) {
-		s = 1 + x * s / n;
+	int i;
+	double num = 1;
+	double denom = 1;
+	for (i=1; i<=n; i++) {
+		num *= x;
+		denom *= i;
+		s += num / denom;
+				
 	}
 	return s;
 }
@@ -37,7 +43,7 @@ double eLoop(double x, double n) {					// using a for loop to perform Taylor Ser
 int main()
 {
 
-	cout << eLoop(2, 10) << endl;
+	cout << eLoop1(1, 10) << endl;
 
 
 	return 0;
