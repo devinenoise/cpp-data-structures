@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int rfib(int n) {			// recursive function to find the fibonnaci sequence of a n
+int rfib(int n) {			// recursive function to find the Fibonnaci sequence of a n
 	if (n <= 1)return n;
 	else
 		return rfib(n - 2) + rfib(n - 1);
@@ -9,7 +9,7 @@ int rfib(int n) {			// recursive function to find the fibonnaci sequence of a n
 
 int F[10];					//  global array for memoization function set to a length of 10
 
-int mfib(int n)				// fibonacci using memoization
+int mfib(int n)				// Fibonacci using Memoization (tabling)
 {
 	if (n <= 1)
 	{
@@ -41,9 +41,9 @@ int fib(int n){				// iterative for loop to find fibonnaci of n
 
 int main()
 {
-	int i;
+	int i;						
 	for (i = 0; i < 10; i++)
-		F[i] = -1;
+		F[i] = -1;					// initialize the F array with -1 because it is not a Fibonnoci number
 
 	int n = 7;
 	cout << "fib(" << n << ") = " << rfib(n) << endl;
