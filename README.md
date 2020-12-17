@@ -152,3 +152,5 @@ Conversely, if the first call in a recursive function is recursive, it is known 
 In **Indirect recursion**, there may be more than one functions and they are calling one another in a circular manner. (Example. funcA calls funcB which calls funcA)
 
 In **Nested recursion**, a recursive function will pass the parameter as a recursive call. That means “recursion inside recursion”.
+
+**Memoization** or tabling, is an optimization technique used to speed up computer programs by storing the results of function calls and returning the results when the same inputs occur again.
