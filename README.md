@@ -34,11 +34,11 @@ If you have a list with the values = {8, 3, 9, 4, 6, 10, 12}, the data is define
 
 ### Arrays
 
-An array is a collection of similar data elements grouped under one name. The array size is static and can be created in Stack or Heap.
+An array is a collection of similar data elements grouped under one name. The array size is either static or dynamic and will be created in Stack or Heap. The array's memory size is allocated during runtime. To access an array in Heap, you must use a assign a pointer with `p = new int[5]` operator.  To prevent memory leaks, it is a good practice to delete anything that takes memory space when it is no longer needed.  `delete []p`
 
-_Declaration_ : int A[5];
+_Declaration_ : `int A[5];`
 
-_Initialization_ : int B[5]={2,4,6,8,10};
+_Initialization_ : `int B[5]={2,4,6,8,10};`
 
 If you have an array of some size and don't define the elements they will become zero by default.
 
