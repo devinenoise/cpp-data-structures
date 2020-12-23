@@ -44,6 +44,8 @@ If you have an array of some size and don't define the elements they will become
 
 A 2 dimensional array can be created by declaring row and column `int A[n][n]` indices. 2D arrays can also be created by using an array of pointers `int* B[3]` (using Stack and Heap) or a double pointer `int** C` that will point to an array of pointers (stored in Heap).
 
+Row major order is the storing of arrays elements row by row contiguously. Column major order is the storing of array elements column by column consecutively.
+
 ### Linked List
 
 A linked list is dynamic. It is a collection of nodes with variable lengths. It is always created in Heap.
