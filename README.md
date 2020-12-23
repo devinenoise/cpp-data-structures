@@ -42,6 +42,8 @@ _Initialization_ : `int B[5]={2,4,6,8,10};`
 
 If you have an array of some size and don't define the elements they will become zero by default. An array's size can't be increased because you cannot guarantee that the contiguous memory location will be available for the array to use.
 
+A 2 dimensional array can be created by declaring row and column `int A[n][n]` indices. 2D arrays can also be created by using an array of pointers `int* B[3]` (using Stack and Heap) or a double pointer `int** C` that will point to an array of pointers (stored in Heap).
+
 ### Linked List
 
 A linked list is dynamic. It is a collection of nodes with variable lengths. It is always created in Heap.
