@@ -34,7 +34,7 @@ If you have a list with the values = {8, 3, 9, 4, 6, 10, 12}, the data is define
 
 ### Arrays
 
-An array is a collection of similar data elements. The array size is static and can be created in Stack or Heap.
+An array is a collection of similar data elements grouped under one name. The array size is static and can be created in Stack or Heap.
 
 _Declaration_ : int A[5];
 
