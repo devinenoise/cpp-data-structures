@@ -46,6 +46,8 @@ A 2 dimensional array can be created by declaring row and column `int A[n][n]` i
 
 Row major order is the storing of arrays elements row by row contiguously. Column major order is the storing of array elements column by column consecutively.
 
+Linear searching compares elements one by one in order of the array. When searching through an array the item being searched is called a _key_ element. A search is either successful or unsuccessful. Transposition is moving a key element closer to index position 0 incrementally to speed up subsequent searches. Move to Front/Head is moving a key element to index position 0 to speed up subsequent searches. Binary searching requires a sorted array. Binary searches for a key element in the middle of a sorted list and splits them into two using a low, high, and middle parameters. Depending on whether or not the key element is below or above the middle, the search comparison will adjust to the upper or lower half to narrow in on the key element until finding it.
+
 ### Linked List
 
 A linked list is dynamic. It is a collection of nodes with variable lengths. It is always created in Heap.
