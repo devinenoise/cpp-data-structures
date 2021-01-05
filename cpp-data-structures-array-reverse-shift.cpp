@@ -33,11 +33,11 @@ void Reverse(struct Array *arr) {
 	int* B;
 	int i, j;
 
-	B = new int(arr->length);						// creating second array from Heap
+	B = new int(arr->length);						// creating second array in Heap
 
 	for (i = arr->length - 1, j = 0; i >= 0; i--, j++)		// i starts at array end and j starts at [0]
 	{
-		B[j] = arr->A[i];								// copy an elements from A to B in reverse
+		B[j] = arr->A[i];								// copy elements from A to B in reverse
 	}
 	for (i = 0; i < arr->length; i++)
 	{
