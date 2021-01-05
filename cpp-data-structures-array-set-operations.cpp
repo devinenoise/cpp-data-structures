@@ -123,6 +123,7 @@ struct Array* Difference(struct Array* arr1, struct Array* arr2)		// if duplicat
 	arr3->size = arr1->size + arr2->size;
 
 	return arr3;
+	
 }
 
 int main() {
