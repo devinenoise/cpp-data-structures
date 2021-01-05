@@ -50,6 +50,8 @@ Linear searching compares elements one by one in order of the array. When search
 
 The worst case of time taken in Binary searches is 0(log n). Left shifting an array will remove the element at index 0. Left rotating an array will copy the element at position 0 at the end of the array. Conversely, right shift/rotation works the same way except to the right. Shifting takes 0(n) amount of time.
 
+_Appending_ an array means adding a new array to the end of an existing array. _Concatenation_ means taking any number of arrays and combining them into a new array. Elements in two arrays can also be compared and copied from one array to another array. Merging can only be done on sorted lists using a new array for the existing arrays to be merged into.
+
 ### Linked List
 
 A linked list is dynamic. It is a collection of nodes with variable lengths. It is always created in Heap.
