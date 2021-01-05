@@ -32,7 +32,7 @@ A data type is a representation of data and the allowed operations on the data. 
 
 If you have a list with the values = {8, 3, 9, 4, 6, 10, 12}, the data is defined as the space for storing elements, capacity, and size. Your options with this list are to either store it as an array or a linked list. Once you have defined your data type, you can perform certain operations on it to manipulate and search the data - `add(); set(), search()` and so on.
 
-### Arrays
+## Arrays
 
 An array is a collection of similar data elements grouped under one name. The array size is either static or dynamic and will be created in Stack or Heap. The array's memory size is allocated during runtime. To access an array in Heap, you must use a assign a pointer with `p = new int[5]` operator. To prevent memory leaks, it is a good practice to delete anything that takes memory space when it is no longer needed. `delete []p`
 
