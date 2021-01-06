@@ -9,7 +9,7 @@ private:
 	int *A;
 	int size;
 	int length;
-	void swap(int *x, int *y);					
+	void Swap(int *x, int *y);					
 
 public:
 	
@@ -99,7 +99,7 @@ int Array::Delete(int index)		// defining an array pointer and given index param
 	return 0;
 }
 
-void swap(int* x, int* y)							// swap function using pointers
+void Array::Swap(int* x, int* y)							// swap function using pointers
 {
 	int temp;
 	temp = *x;
@@ -114,7 +114,7 @@ int Array::LinearSearch(int key)
 	{
 		if (key == A[i])
 		{
-			swap(&A[i], &A[0]);
+			Swap(&A[i], &A[0]);
 			return i;
 		}
 	}
@@ -217,7 +217,7 @@ void Array::Reverse2()						// reverse array with Swap() function
 	int i, j;
 	for (i = 0, j = length - 1; i < j; i++, j--)
 	{
-		swap(&A[i], &A[j]);
+		Swap(&A[i], &A[j]);
 	}
 }
 
@@ -261,7 +261,7 @@ void Array::Rearrange() {					// sort negatives on the left & positives on the r
 			j--;
 
 		if (i < j)									// negatives on left, positives on right
-			swap(&A[i], &A[j]);				// swap negative with positive
+			Swap(&A[i], &A[j]);				// swap negative with positive
 	}
 }
 
