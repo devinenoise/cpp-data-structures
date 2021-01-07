@@ -47,12 +47,7 @@ int isSorted(struct Array arr) {
 	return 1;										// 1 is true
 }
 
-void swap(int* x, int* y)							// swap function using pointers
-{
-	int temp = *x;
-	*x = *y;
-	*y = temp;
-}
+
 
 void Rearrange(struct Array* arr) {					// sort negatives on the left & positives on the right
 
