@@ -12,11 +12,9 @@ struct Array {
 
 
 int MissingElement(Array arr) {
-	int diff, i, k, low, high;
-	low = arr.A[0];
-	high = arr.A[9];
-	diff = low - 0;
-
+	int diff, i;
+	diff = arr.A[0] - 0;
+	
 	for (i = 0; i < arr.length; i++) 
 	{
 		
