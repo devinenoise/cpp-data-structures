@@ -13,7 +13,7 @@ struct Array {
 
 int MissingElement(Array arr) {
 	int diff, i;
-	diff = arr.A[0] - 0;
+	diff = arr.A[0];
 	
 	for (i = 0; i < arr.length; i++) 
 	{
@@ -35,7 +35,7 @@ return 0;
 
 int main() {
 	
-	Array arr1 = {{1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 15, 17}, 12 };
+	Array arr1 = {{1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 15, 17}, 12 };
 	
 	MissingElement(arr1);
 
