@@ -13,7 +13,7 @@ struct Array {
 
 int FindDuplicate(Array arr) {
 	int i, j;
-	cout << "There are some duplicates.. " << endl;
+	cout << "Searching for duplicates.. " << endl;
 
 
 	for (i = 0; i < arr.length - 1; i++)
@@ -27,11 +27,14 @@ int FindDuplicate(Array arr) {
 			arr.A[j] = -1;
 		}
 		}
-		if (count > 1) 
+		if (count > 1)
 		{
-			
+
 			cout << arr.A[i] << " is present " << count << " times" << endl;
 		}
+		else
+			cout << "No duplicates were found" << endl;
+			break;
 		}
 		return 0;
 }
@@ -40,7 +43,7 @@ int FindDuplicate(Array arr) {
 
 int main() {
 
-	Array arr1 = { {5, 2, 2, 4, 6, 9, 8, 11, 11, 13, 15, 17}, 12 };
+	Array arr1 = { {2, 2, 3, 4, 6, 9, 8, 11, 12, 13, 15, 17}, 12 };
 
 	FindDuplicate(arr1);
 
