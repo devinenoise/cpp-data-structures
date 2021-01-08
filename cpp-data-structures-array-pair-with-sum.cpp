@@ -44,7 +44,7 @@ int HashPairSum(Array arr, int sum) {
 	return 0;
 }
 
-int SortedSum(Array arr, int sum) {
+int SortedSum(Array arr, int sum) {									// searching a sorted list with i at 0 and j at array length - 1
 	int i = 0;
 	int j = arr.length - 1;
 
