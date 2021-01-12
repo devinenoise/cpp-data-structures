@@ -26,33 +26,6 @@ void CompareStrings(char* string1, char *string2) {
 	
 }
 
-char Palindrome(char* string)
-{
-	int i, j, t = 0;
-	
-	for (i = 0; string[i] != '\0'; i++)
-	{
-	}
-	j = i - 1;
-
-	while (t <= j)
-	{
-
-		if (string[t] != string[j]) {
-
-			cout << string << " is not a palindrome" << endl;
-			return 0;
-		}
-
-		else
-		{
-			t++;
-			j--;
-		}
-		cout << string<< " is a palindrome" << endl;
-		return 0;
-	}
-}
 
 
 int main() {
@@ -63,11 +36,6 @@ int main() {
 	CompareStrings(A, B);
 
 
-	char C[]= "madams";
-	char D[]= "racecar";
-
-	Palindrome(C);
-	Palindrome(D);
 
 	return 0;
 }
