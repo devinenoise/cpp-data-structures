@@ -43,6 +43,15 @@ void Display(struct Node *p)											// display the linked list elements
 	}
 }
 
+void RDisplay(struct Node *p)											// display the linked list elements recursively
+{
+	if (p != NULL)
+	{
+		cout << p->data << endl;										// prints in order
+		RDisplay(p->next);												// if this is called before cout it will print in reverse
+	}
+}
+
 
 
 
@@ -52,7 +61,7 @@ int main() {
 	int A[] = { 3,5,7,10,15 };
 	create(A, 5);
 
-	Display(first);
+	RDisplay(first);
 
 
 	return 0;
