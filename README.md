@@ -177,4 +177,6 @@ In **Nested recursion**, a recursive function will pass the parameter as a recur
 
 A character set is the set of characters supported by a programming language. Because computers use numbers to compute everything, every character is defined by a numeric code called an ASCII code. ASCII codes are a subset of Unicode.
 
-`char` is the data type used when declaring a character. Characters can be created in an array called a character array. You can store a character or an ASCII code inside a character array and they will display the same as the character.  A *string* is also an array of characters.  At the end of the string is a null character called a string terminator.  It delineates the end of the string in an array.
+`char` is the data type used when declaring a character. Characters can be created in an array called a character array. You can store a character or an ASCII code inside a character array and they will display the same as the character. A _string_ is also an array of characters. At the end of the string is a null character called a string terminator. It delineates the end of the string in an array.
+
+A permutation, also called an “arrangement number” or “order”, is a rearrangement of the elements of an ordered list S into a one-to-one correspondence with S itself. A string of length n has n! permutation.
