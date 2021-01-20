@@ -85,7 +85,6 @@ void Insert(struct Node* p, int index, int key)							// insert node at given po
 	int i;
 
 	if (index < 0 || index > count(p))									// checks the validity of the index
-		
 		return;
 	t = new Node;														// create new node
 	t->data = key;														// put data in new node
@@ -102,22 +101,48 @@ void Insert(struct Node* p, int index, int key)							// insert node at given po
 			p = p->next;
 			t->next = p->next;
 			p->next = t;
-		
 	}
-	
 }
 
+void SortedInsert(struct Node * p, int x) {
+	
+	struct Node *t,*q = NULL;
+	t = new Node;
+	t->data = x;
+	t->next = NULL;
+	
+	if (first == NULL)										// checks if linked list is empty
+		first = t;
+	else
+	{
+		while (p && p->data < x)
+		{
+			q = p;
+			p = p->next;
+
+		}
+		if (p == first) {									// new element will be inserted to first position
+			t->next = first;
+			first = t;
+		}
+		else
+		{
+			t->next = q->next;
+			q->next = t;
+		}
+	}
+
+}
 
 int main() {
 
 	int A[] = { 3,5,7,9,11};
 	create(A, 5);
+	
+	SortedInsert(first,6);		
+	
 	Display(first);
 	
-	Insert(first, 2, 10);
-
-	Display(first);
-
-
+	
 	return 0;
 }

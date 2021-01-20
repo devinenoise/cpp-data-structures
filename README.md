@@ -62,7 +62,7 @@ Arrays can be compared by set operations (binary) such as union, intersection, d
 
 ### Linked List
 
-A linked list is dynamic and contains a series of nodes. A node contains two members -- data and a pointer to the next node. It is always created in Heap during runtime. A linked list is ideal when you don't know how many elements you'll need to store. Head is a pointer of node type that points to the first/head node. A linked list is a self-referential structure because it has a member of its own type. Traversing means to visit all the nodes of a linked list one by one.
+A linked list is dynamic and contains a series of nodes. A node contains two members -- data and a pointer to the next node. It is always created in Heap during runtime. A linked list is ideal when you don't know how many elements you'll need to store. Head is a pointer of node type that points to the first/head node. A linked list is a self-referential structure because it has a member of its own type. Traversing means to visit all the nodes of a linked list one by one.  
 
 ## Structures
 

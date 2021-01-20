@@ -112,6 +112,7 @@ int main() {
 	create(A, 8);
 
 	temp = LSearch(first,25);
+	temp = LSearch(first, 8);
 	if (temp)
 		cout << "Your key: "<< temp->data <<", was found " << endl;
 	else
@@ -120,7 +121,7 @@ int main() {
 	cout << "The max element is " << Max(first) << endl;
 	cout << "The max element is " << Rmax(first) << endl;
 
-	Display(first);													// shows 25 has moved to the front
+	Display(first);													// shows 8 has moved to the front before 25
 
 	return 0;
 }
