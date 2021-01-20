@@ -33,7 +33,7 @@ void create(int A[], int n)											// creating a linked list from an array
 
 }
 
-int max(struct Node* p)										// find the maximum element value
+int Max(struct Node* p)										// find the maximum element value
 {
 	int maximum = INT32_MIN;
 	
@@ -62,13 +62,65 @@ int Rmax(struct Node* p)									// find the maximum element value with recursio
 		return x>p->data?x:p->data;
 }
 
+struct Node * LSearch(struct Node* p, int key)						// linear search for an element and moves it to front position
+{
+	struct Node* q = NULL;
+
+	while (p != NULL) {
+		if (key == p->data)
+		{
+			if (p != first)
+			{
+				q->next = p->next;
+				p->next = first;
+				first = p;
+				return p;
+			}
+			
+		}
+		q = p;
+		p = p->next;
+	}
+	return NULL;
+}
+
+struct Node * RSearch(struct Node* p, int key)					// linear search done recursively
+	{
+		if (p == NULL)
+			return NULL;
+		if (key == p->data) {
+			return p;
+		}
+		return RSearch(p->next, key);
+	}
+
+void Display(struct Node* p)											// display the linked list elements
+{
+	while (p != NULL)
+	{
+		cout << p->data << endl;
+		p = p->next;
+	}
+}
+
+
+
 int main() {
+	struct Node* temp;
 
-	int A[] = { 3,5,7,10,15 };
-	create(A, 5);
+	int A[] = { 3,5,7,10,25,8,32,2 };
+	create(A, 8);
 
-	cout << "The max element is " << max(first) << endl;
+	temp = LSearch(first,25);
+	if (temp)
+		cout << "Your key: "<< temp->data <<", was found " << endl;
+	else
+		cout << "Key not found" << endl;
+
+	cout << "The max element is " << Max(first) << endl;
 	cout << "The max element is " << Rmax(first) << endl;
+
+	Display(first);													// shows 25 has moved to the front
 
 	return 0;
 }
