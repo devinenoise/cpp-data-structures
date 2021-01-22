@@ -33,8 +33,6 @@ void create(int A[], int n)											// creating a linked list from an array
 
 }
 
-
-
 void Display(struct Node* p)											// display the linked list elements
 {
 	while (p != NULL)
@@ -55,24 +53,52 @@ int checkSort(struct Node* p)
 		if (p->data < x) {									// if p is less than x before it, the list is not sorted
 			return 0;
 		}
-		x = p->data;										// move x to the next position
+		x = p->data;										// set x to the prev position
 		p = p->next;										// move p to the next position
 	}
 	return 1;
 }
 
+void RemoveDuplicate(struct Node* p)							// removing duplicates from a sorted linked list
+{
+	Node* q = first->next;										// q is 2nd position
+	cout << "Checking and removing duplicates..." << endl;
+	while (q != NULL)
+	{
+		if (p->data != q->data)									// checking if duplicate
+		{
+			p = q;												// moving p forward
+			q = q->next;										// moving q forward
+		}
+		else
+		{
+			p->next = q->next;
+			delete q;
+			q = p->next;
+		}
+	}
+
+
+
+}
 
 int main() {
 
-	int A[] = { 1,5,7,9,11 };
-	create(A, 5);
-		
+	int A[] = { 1,5,5,7,9,11,11,13,15,16 };
+	create(A, 10);
+	
+	Display(first);
 
 	if (checkSort(first)) {
-		cout << "Sorted" << endl;
+		cout << "List is Sorted" << endl;
 	}
 	else
-		cout << "Not Sorted" << endl;
+		cout << "List is Not Sorted" << endl;
+
+	RemoveDuplicate(first);
+
+	Display(first);
+
 
 	return 0;
 }
