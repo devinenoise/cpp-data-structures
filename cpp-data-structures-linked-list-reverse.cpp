@@ -44,7 +44,7 @@ void Display(struct Node* p)											// display the linked list elements
 	cout << endl;
 }
 
-void Reverse(struct Node* p)
+void Reverse(struct Node* p)										// reverse a linked list
 {
 	cout << "Reversing..." << endl;
 	p = first;
@@ -60,6 +60,20 @@ void Reverse(struct Node* p)
 	first = q;
 }
 
+void RecReverse (struct Node *q, struct Node *p)					// reverse linked list recursively
+{
+
+	if (p) 
+	{
+		RecReverse(p, p->next);
+		p->next = q;
+	}
+	else
+	{
+		first = q;
+	cout << "Reversing recursively..." << endl;
+	}
+}
 
 
 int main() {
@@ -70,6 +84,10 @@ int main() {
 	Display(first);
 
 	Reverse(first);
+
+	Display(first);
+
+	RecReverse(NULL, first);											// q starts at NULL and p is first
 
 	Display(first);
 
