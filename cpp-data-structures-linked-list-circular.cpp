@@ -59,6 +59,56 @@ void RDisplay(struct Node* h)											// display the circular list recursively
 	flag = 0;
 	}
 
+int count(struct Node* p)											// count a circular linked list
+{
+	int count = 0;
+	
+	do {
+		count++;
+		p = p->next;
+	} while (p != Head);
+	return count;
+}
+
+void Insert(struct Node* p, int index, int key)						// insert node at given position
+{
+	struct Node* t;
+	int i;
+
+	if(index < 0 || index > count(p))
+		return;
+
+	if (index == 0)													// checks the validity of the index
+	{
+		t = new Node;													// create new node
+		t->data = key;													// put data in new node
+
+		if (Head == NULL)												// put the new node on first position
+		{
+			Head = t;
+			Head->next = Head;
+		}
+		else
+		{
+			while (p->next != Head)
+				p = p->next;
+			p->next = t;
+			t->next = Head;
+			Head = t;
+		}
+	}
+	else 
+	{
+		for (i = 0; i < index - 1; i++)
+		p = p->next;
+		t = new Node;
+		t->data = key;
+		t->next = p->next;
+		p->next = t;
+	}
+	
+}
+
 
 int main()
 {
@@ -66,8 +116,11 @@ int main()
 
 	int A[] = { 3,5,7,9,11 };
 	create(A, 5);
-	RDisplay(Head);
-
-
+	
+	Insert(Head, 5, 10);
+	
+	Display(Head);
+	
+	
 	return 0;
 }
