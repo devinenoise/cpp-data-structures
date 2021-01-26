@@ -109,6 +109,44 @@ void Insert(struct Node* p, int index, int key)						// insert node at given pos
 	
 }
 
+int Delete(struct Node* p, int index)
+{
+	struct Node* q;
+	int i;
+	int x;
+
+	if (index < 0 || index > count(Head))							// checks if list is valid
+		return -1;
+
+	if (index == 1)												// if there's only one item
+	{
+		p = Head;
+		while (p->next != Head)
+		p = p->next;
+		x = Head->data;
+
+		if (Head == p)
+		{
+			delete Head;
+			Head = NULL;
+		}
+		else
+		{
+			p->next = Head->next;
+			delete Head;
+			Head = p->next;
+		}
+	}	else 
+		{
+			for (i = 0; i < index - 2; i++)							// loop through the list to find the index
+			p = p->next;											// p moves forward
+			q = p->next;
+			p->next = q->next;
+			x = q->data;
+			delete q;
+	}
+		return x;
+}
 
 int main()
 {
@@ -119,6 +157,8 @@ int main()
 	
 	Insert(Head, 5, 10);
 	
+	Delete(Head, 1);
+
 	Display(Head);
 	
 	
