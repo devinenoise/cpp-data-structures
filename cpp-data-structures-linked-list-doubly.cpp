@@ -11,7 +11,7 @@ struct Node {
 
 
 
-void create(int A[], int n)											// creating a linked list from an array
+void create(int A[], int n)											// creating a doubly linked list from an array
 {
 	struct Node* t, * last;
 	int i;
@@ -56,6 +56,38 @@ int Length(struct Node* p)
 	return len;
 }
 
+void Insert(struct Node* p, int index, int x)
+{
+	struct Node* t;
+	int i;
+
+	if (index < 0 || index > Length(p))
+		return;
+
+	if (index == 0) {
+		t = new Node;
+		t->data = x;
+		t->prev = NULL;
+		t->next = first;
+		first->prev = t;
+	} else 
+	{
+		for (i = 0; i < index - 1; i++)
+			p = p->next;
+		t = new Node;;
+		t->data = x;
+		t->prev = p;
+		t->next = p->next;
+		
+	if (p->next) 
+	
+		p->next->prev = t;
+		p->next = t;
+	}
+}
+
+
+
 
 int main()
 {
@@ -65,6 +97,10 @@ int main()
 	create(A, 5);
 
 	cout << "Length is : " << Length(first) << endl;
+	Display(first);
+
+	Insert(first, 5, 10);
+
 	Display(first);
 
 
