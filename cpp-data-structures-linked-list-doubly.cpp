@@ -117,7 +117,25 @@ int Delete(struct Node* p, int index)
 
 }
 
-
+void Reverse(struct Node* p)
+{
+	cout << "Reversing your list.." << endl;
+	
+	struct Node *temp;
+	
+	while (p != NULL)
+	{
+		temp = p->next;
+		p->next = p->prev;
+		p->prev = temp;
+		p = p->prev;
+		
+		if (p!= NULL && p->next == NULL) 
+		{
+		first = p;
+		}
+	}
+}
 
 int main()
 {
@@ -134,6 +152,10 @@ int main()
 	Display(first);
 
 	Delete(first, 6);
+
+	Display(first);
+
+	Reverse(first);
 
 	Display(first);
 
