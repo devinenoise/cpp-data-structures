@@ -89,7 +89,6 @@ void Insert(struct Node* p, int index, int x)
 
 int Delete(struct Node* p, int index)
 {
-	struct Node* q;
 	int x = -1;
 	int i;
 	cout << "*Deleting a node.." <<endl;
