@@ -60,6 +60,7 @@ void Insert(struct Node* p, int index, int x)
 {
 	struct Node* t;
 	int i;
+	cout << "*Node inserted " << endl;
 
 	if (index < 0 || index > Length(p))
 		return;
@@ -86,6 +87,36 @@ void Insert(struct Node* p, int index, int x)
 	}
 }
 
+int Delete(struct Node* p, int index)
+{
+	struct Node* q;
+	int x = -1;
+	int i;
+	cout << "*Deleting a node.." <<endl;
+
+	if (index < 1 || index > Length(p))
+		return -1;
+
+	if (index == 1)
+	{
+		first = first->next;
+		if (first)first->prev = NULL;
+		x = p->data;
+		delete p;
+		
+	}
+	else
+	{
+		for (i = 0; i < index - 1; i++)
+			p = p->next;
+		p->prev->next = p->next;
+		if (p->next)
+			p->next->prev = p->prev;
+		x = p->data;
+		delete p;
+	}
+
+}
 
 
 
@@ -103,6 +134,9 @@ int main()
 
 	Display(first);
 
+	Delete(first, 6);
+
+	Display(first);
 
 	return 0;
 }
