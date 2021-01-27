@@ -64,6 +64,8 @@ Arrays can be compared by set operations (binary) such as union, intersection, d
 
 A linked list is a dynamic array and contains a series of nodes. A node contains two members -- data and a pointer to the next node. It is always created in Heap during runtime. A linked list is ideal when you don't know how many elements you'll need to store. Head is a pointer node type that points to the first/head node in the list. A linked list is a self-referential structure because it has a member of its own type. Traversing means to visit all the nodes of a linked list one by one.  A circular linked list will have the tail node pointing to the head node instead of ending linearly with null.
 
+In a singular linked list, a node will have a pointer to its next node.  In a doubly linked list, a node can be traversed in both directions.
+
 ## Structures
 
 A structure is a collection of data members that are related under one name.
