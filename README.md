@@ -68,9 +68,9 @@ In a singular linked list, a node will have a pointer to its next node. A circul
 
 ## Stack
 
-Stack is a collection of elements. Those elements are inserted and deleted by using Last-In First-Out. Stack data usually is comprised of a space for storing elements and a top pointer. The operations available to the stack are `push(x)`, `pop()`, `Peek(index)`, `StackTop()`, `isEmpty()` and `isFull()`. Push is inserting one value per call. Pop is deleting a value. Push and Pop are always adding or deleting from top of the stack. Peek is knowing a value at a particular index while counting positions from the top of the stack down. StackTop is for knowing the top most value in the stack. isEmpty and isFull check whether or not the stack is empty or full respectively.
+Stack is a collection of elements. Those elements are inserted and deleted by using Last-In First-Out. Stack data usually is comprised of a space for storing elements and a top pointer. The operations available to the stack are `push(x)`, `pop()`, `peek(index)`, `StackTop()`, `isEmpty()` and `isFull()`. Push is inserting one value per call. Pop is deleting a value. Push and Pop are always adding or deleting from top of the stack. Peek is knowing a value at a particular index while counting positions from the top of the stack down. StackTop is for knowing the top most value in the stack. isEmpty and isFull check whether or not the stack is empty or full respectively.
 
-An Array or a Linked List can be used as a data structure for a stack. As an array, a stack can be imagined as a vertical array with index 0 being on the bottom of the stack.
+An Array or a Linked List can be used as a data structure for a stack. As an array, a stack can be imagined as a vertical array with index 0 being on the bottom of the stack. The Index can be found by using the formula `Top - Position + 1`.
 
 ## Structures
 
