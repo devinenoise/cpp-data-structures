@@ -29,7 +29,6 @@ Stack::~Stack() {
 	delete[] S;
 }
 
-
 void Stack::push(char x) {
 	if (isFull()) {
 		cout << "stack overflow" << endl;
@@ -51,7 +50,6 @@ char Stack::pop() {
 	}
 	return x;
 }
-
 
 int Stack::isFull() {
 	if (top == size - 1) {
@@ -78,13 +76,13 @@ int isBalanced(char* exp)
 	Stack st((int)strlen(exp));													// create a stack
 
 	for (int i = 0; exp[i] != '\0'; i++) {										// process the expression
-		if (exp[i] == '(' || exp[i] == '{' || exp[i] == '[') {					// ( found push to stack
+		if (exp[i] == '(' || exp[i] == '{' || exp[i] == '[') {					// (,{,[ found push to stack
 			st.push(exp[i]);
 		}
-		else if (exp[i] == ')' || exp[i] == '}' || exp[i] == ']') {				// ) found
+		else if (exp[i] == ')' || exp[i] == '}' || exp[i] == ']') {				// ),},] found
 			if (st.isEmpty()) 													// ) found and stack is empty: unbalanced
 				return false;
-			else if ((exp[i] == st.stackTop() + 1) || (exp[i] == st.stackTop() + 2))     // matching the symbols with the top stack         
+			else if ((exp[i] == st.stackTop() + 1) || (exp[i] == st.stackTop() + 2))     // matching the symbols with the top stack ASCII       
 				st.pop();
 			else
 				return false;
