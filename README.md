@@ -72,6 +72,40 @@ Stack is a collection of elements. Those elements are inserted and deleted by us
 
 An Array or a Linked List can be used as a data structure for a stack. As an array, a stack can be imagined as a vertical array with index 0 being on the bottom of the stack. The Index can be found by using the formula `Top - Position + 1`.
 
+## Infix to Postfix Conversion
+
+The purpose of writing an expression in postfix form, is to be able to scan an expression once and perform all the operations. If it is an infix it is not easy to evaluate in one single scan.
+
+Infix: Operand Operator Operand `a + b`
+
+Prefix: Operator Operand Operand `+ab`
+
+Postfix: Operand Operand Operator `ab+`
+
+Whenever you write an expression it should be fully parenthesized, otherwise it will be done by the compiler by precedence. Precedence doesn't use the order of operations.
+
+`+` and `-` have precedence 1.
+
+`*` and `/` have precedence 2.
+
+`(a + (b * c))` written as prefix is `+a*bc` and as postfix is `abc*+`
+
+### Associativity
+
+If precedences are equal then we look at associativity to perform operations. Fully parenthesizing an equation determines the L-R or R-L order of associativity.
+
+`+` and `-` is Left-Right associativity.
+
+`*` and `/` is Left-Right associativity.
+
+`^` is Right-Left associativity and precedence 3.
+
+`-` negation (Unary minus) is Right-Left associativity and precedence 4.
+
+`()` is Left-Right associativity and precedence 5.
+
+All Unary operators have the same precedence and are Right-Left.
+
 ## Structures
 
 A structure is a collection of data members that are related under one name.
